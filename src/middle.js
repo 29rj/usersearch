@@ -1,3 +1,4 @@
+
 const Middle = () => {
     const handleClick = () => {
 
@@ -66,7 +67,7 @@ const Middle = () => {
                 </div>
 
                 <div>
-                    <a href=${data.followers_url} > <p>URL's Of People Following Me </p></a>
+                    <a href=${data.followers_url} > <p>URL's Of People Following Me : Click To Visit</p></a>
                 </div>
 
                 <div>
@@ -74,7 +75,7 @@ const Middle = () => {
                 </div>
 
                 <div>
-                    <a href=${data.followers_url} > <p>URL's Of People I Follow </p></a>
+                    <a href=${data.followers_url} > <p>URL's Of People I Follow :  Click To Visit </p></a>
                 </div>
             </div>
             `;
