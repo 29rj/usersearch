@@ -1,13 +1,4 @@
-import Footer from './footer';
 const Middle = () => {
-
-    const showProfile = () => {
-        let profileId = document.getElementById('profile');
-        profileId.innerHTML = `
-        <h1> Rishabh </h1>
-        `;
-    }
-
     const handleClick = () => {
 
         let userName = document.getElementById('user').value;
@@ -27,11 +18,12 @@ const Middle = () => {
                 fetch(data.repos_url)
                     .then((urls) => urls.json())
                     .then((url) => {
-                        // console.log(typeof(url));
+
                         for (let i = 0; i < url.length - 1; i++) {
-                            //    console.log(url[i].html_url);
+                            let h3Id = document.getElementById('headH3');
+                            h3Id.style.display = "block";
+
                             allUrls = url[i].html_url;
-                            console.log(allUrls);
 
                             let repoId = document.getElementById('repo');
                             let repoData = repoId.innerHTML;
@@ -43,11 +35,10 @@ const Middle = () => {
                         }
                     })
 
-                outputId.innerHTML = `
+            outputId.innerHTML = `
             <div class="profile">
-
                 <div>
-                    <img src=${data.avatar_url}>
+                    <a href=${data.html_url}><img src=${data.avatar_url}></a>
                 </div>
 
                 <div>
@@ -61,11 +52,9 @@ const Middle = () => {
                 <div>
                    <p> Following :  ${data.following}</p>
                 </div>
-
-
             </div>
             `;
-                // console.log(data);
+                console.log(data);
             });
     }
 
@@ -74,17 +63,16 @@ const Middle = () => {
 
             <div id="inputDiv">
                 <form id="info">
-                    <input type="text" id="user" placeholder='username'></input>
+                    <input type="text" id="user" placeholder='Username'></input>
                     <input type="button" value="Searching" onClick={handleClick}></input>
                 </form>
             </div>
 
             <div id="outputDiv">
-
             </div>
 
             <div id="repoDiv">
-                <h3>List Of Repo</h3>
+            <h3 id="headH3">List Of Repo</h3>
                 <div id="repo">
 
                 </div>
