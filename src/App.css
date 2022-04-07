@@ -120,7 +120,7 @@ body{
 }
 
 #repo{
-  width: inherit;
+  width: 100%;
   margin: auto;
   word-wrap:break-word;
 }
