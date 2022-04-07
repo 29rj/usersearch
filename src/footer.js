@@ -1,7 +1,7 @@
 const Footer = () => {
     return ( 
         <h4>
-            @rishabh
+            @rj29
         </h4>
      );
 }

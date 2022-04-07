@@ -20,8 +20,12 @@ const Middle = () => {
                     .then((url) => {
 
                         for (let i = 0; i < url.length - 1; i++) {
+
                             let h3Id = document.getElementById('headH3');
                             h3Id.style.display = "block";
+
+                            let repoDiv = document.getElementById('repoDiv');
+                            repoDiv.style.borderColor = "wheat";
 
                             allUrls = url[i].html_url;
 
@@ -37,20 +41,40 @@ const Middle = () => {
 
             outputId.innerHTML = `
             <div class="profile">
-                <div>
+                <div id="image-div">
                     <a href=${data.html_url}><img src=${data.avatar_url}></a>
                 </div>
 
                 <div>
-                    <h2>${data.name}</h2>
+                    <h2>Name : ${data.name}</h2>
                 </div>
 
                 <div>
-                    <p> Followers :  ${data.followers}</p>
+                    <p> Login ID :  ${data.login}</p>
                 </div>
 
                 <div>
-                   <p> Following :  ${data.following}</p>
+                    <p> Created At :  ${data.created_at}</p>
+                </div>
+
+                <div>
+                    <p> Updated At :  ${data.updated_at}</p>
+                </div>
+
+                <div>
+                     <p> Followers :  ${data.followers}</p>
+                </div>
+
+                <div>
+                    <a href=${data.followers_url} > <p>URL's Of People Following Me </p></a>
+                </div>
+
+                <div>
+                    <p> Followers :  ${data.following}</p>
+                </div>
+
+                <div>
+                    <a href=${data.followers_url} > <p>URL's Of People I Follow </p></a>
                 </div>
             </div>
             `;

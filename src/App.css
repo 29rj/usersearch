@@ -1,3 +1,5 @@
+/* App.js Section */
+
 .App {
   text-align: center;
 }
@@ -38,36 +40,43 @@
 }
 
 
-/* Header section */
 
+/* Body Section*/
+body{
+  background-color: black;
+  color: wheat;
+  letter-spacing: 0.25cm;
+}
+
+/* Header section  --> header.js*/
 #header h1{
-  background-color: bisque;
   font-size: 2.4rem;
   width: fit-content;
   padding: 20px;
   margin: auto;
   margin-top: 50px;
   margin-bottom: 70px;
-  border: 2px solid cadetblue;
+  border: 2px solid rgb(255, 255, 255);
 }
 
-/* middle section */
+
+/* Middle section --> middle.js*/
 .profile{
   display: flex;
   align-items: center;
   flex-direction: column;
-  /* width: 100px; */
   margin: auto;
-  /* border: 2px solid red ; */
+  letter-spacing: 0.1cm;
 }
 
 .profile div{
   border: 3px solid black;
   border-radius: 3px;
-  background-color: #61dafb;
   width: 45%;
   margin-top: 20px;
   padding: 10px;
+  border: 2px solid wheat;
+  font-weight: bold;
 }
 
 .profile div img{
@@ -75,25 +84,43 @@
   width: 70%;
   border-radius: 100%;
   background-color: whitesmoke;
-  /* border: 5px solid rgb(6, 6, 7); */
+}
+
+#image-div a{
+  height: inherit;
+  width: inherit;
+}
+
+.profile div a{
+  text-decoration: none;
+  color: wheat;
+}
+
+.profile div a:hover{
+  cursor: pointer;
 }
 
 #repoDiv{
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  /* width: inherit; */
+  letter-spacing: 0.15cm;
+  border: 2px solid wheat;
+  width: 45%;
+  margin: auto;
+  padding: 10px;
+  margin-top: 20px;
+  border-color: black;
 }
 
 #repoDiv h3{
   display: none;
+  margin: 0px;
+  margin-top: 10px;
 }
 
 #repo{
-  /* border: 2px solid brown; */
   width: fit-content;
   margin: auto;
-  padding: 20px;
 }
 
 #info{
@@ -102,7 +129,6 @@
   width: 30%;
   margin: auto;
   margin-bottom: 50px;
-  /* border: 2px solid red; */
   height: 40px;
 }
 
@@ -110,11 +136,23 @@
   text-align: center;
   font-size: 1.2rem;
   width: fit-content;
-  color: rebeccapurple;
+  transition: all ease-in-out 0.25s;
+  box-sizing: border-box;
+}
+
+input[type="button"]{
+  border: none;
+  border-radius: 10px;
+  border: 2px solid rgb(2, 2, 2);
 }
 
 input[type="button"]:hover{
   cursor: pointer;
-  transition: all ease-in-out 1s;
-  background-color: aquamarine;
+  background-color: rgb(7, 7, 7);
+  color: white;
+  border: 2px solid white;
+}
+
+input[type="text"]:hover{
+  box-shadow: #61dafb;
 }
