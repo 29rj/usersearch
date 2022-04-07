@@ -89,7 +89,7 @@ const Middle = () => {
             <div id="inputDiv">
                 <form id="info">
                     <input type="text" id="user" placeholder='Username'></input>
-                    <input type="button" value="Searching" onClick={handleClick}></input>
+                    <input type="button" value="Search" onClick={handleClick}></input>
                 </form>
             </div>
 
