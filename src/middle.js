@@ -76,7 +76,7 @@ const Middle = () => {
                 </div>
 
                 <div>
-                    <p> Followers :  ${data.following}</p>
+                    <p> Following :  ${data.following}</p>
                 </div>
 
                 <div>
