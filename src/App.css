@@ -120,8 +120,9 @@ body{
 }
 
 #repo{
-  width: fit-content;
+  width: inherit;
   margin: auto;
+  word-wrap:break-word;
 }
 
 #info{

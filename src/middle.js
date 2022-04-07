@@ -2,6 +2,11 @@
 const Middle = () => {
     const handleClick = () => {
 
+        let outputId = document.getElementById('outputDiv');
+        let repoId = document.getElementById('repo');
+        outputId.innerHTML="";
+        repoId.innerHTML="";
+
         let userName = document.getElementById('user').value;
 
         let reqName = userName.split(' ').join('');
